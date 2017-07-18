@@ -21,7 +21,7 @@ void dyl_new_implementation(id self, SEL _cmd)
         ((void(*)(id,SEL))originalImpPointor)(self, _cmd);
     }
 }
-先执行显示无数据界面的逻辑，再执行原本的reloadData逻辑。
+先执行显示无数据界面的逻辑，再执行原本的originalImpPointor逻辑。
 
 
 2、可以通过DYLEmptyDataSetSource、DYLEmptyDataSetDelegate增加协议方法，配置无数据界面，支持自定义视图。
